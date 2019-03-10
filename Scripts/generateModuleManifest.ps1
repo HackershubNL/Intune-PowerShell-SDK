@@ -149,7 +149,7 @@ $generateManifestArgs = @{
     # RequiredModules = @()
 
     # Assemblies that must be loaded prior to importing this module
-    # RequiredAssemblies = @()
+    RequiredAssemblies = @('.\Newtonsoft.Json-6.0.1.dll', '.\Microsoft.AspNet.SignalR.Client.dll', '.\Microsoft.Practices.ServiceLocation.dll')
 
     # Script files (.ps1) that are run in the caller's environment prior to importing this module
     # ScriptsToProcess = @()

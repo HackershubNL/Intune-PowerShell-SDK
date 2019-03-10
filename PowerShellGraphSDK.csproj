@@ -41,6 +41,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Cquential.Microsoft.Practices.ServiceLocation" Version="1.0.0" />
+        <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.2.1" />
         <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="3.19.2" />
         <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
         <PackageReference Include="XmlDoc2CmdletDoc" Version="0.2.10" />
@@ -87,7 +89,7 @@
     </Target>
 
     <Target Name="GeneratePowerShellModuleManifest" AfterTargets="CopyPowerShellModuleAdditions">
-        <Exec Command="$(PowerShellExe) -NonInteractive -ExecutionPolicy Unrestricted -Command &quot;&amp; { $(PowerShellModuleManifestGenerationScript) -ModuleName &apos;$(PowerShellModuleName)&apos; -OutputDirectory &apos;$(OutputPath)&apos; -MainModuleRelativePath &apos;$(AssemblyName).dll&apos; }&quot;" />
+        <Exec Command="$(PowerShellExe) -NonInteractive -ExecutionPolicy Unrestricted -Command &quot;&amp; { $(PowerShellModuleManifestGenerationScript) -ModuleName '$(PowerShellModuleName)' -OutputDirectory '$(OutputPath)' -MainModuleRelativePath '$(AssemblyName).dll' }&quot;" />
     </Target>
 
 </Project>
